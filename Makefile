@@ -3,7 +3,7 @@
 #
 # @file
 # @version 0.1
-TARGET_EXEC ?= tty-pong-clock
+TARGET_EXEC ?= tty-morph-clock
 
 BUILD_DIR ?= ./build
 SRC_DIRS ?= ./src
