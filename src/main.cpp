@@ -26,7 +26,6 @@ Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include "config.h"
 #include "digit.h"
 #include "matrix.h"
-#include "pong.h"
 #include <getopt.h>
 int main(int argc, char **argv) {
 
@@ -72,9 +71,8 @@ int main(int argc, char **argv) {
       break;
     }
   }
-   Pong pong = Pong(config);
-  // Digit hour2 = Digit(config, 0, 20, 2);
-  // Digit hour = Digit(config, 0, 0, 0);
+   Digit hour2 = Digit(config, 0, 20, 2);
+   Digit hour = Digit(config, 0, 0, 0);
   uint8_t i = 0;
    // hour.Draw(i);
    // hour2.Draw(i);
@@ -84,15 +82,13 @@ int main(int argc, char **argv) {
       i = 0;
 
 
-     // hour2.Morph(i);
-     // hour.Morph(i);
-    pong.update();
-    pong.draw();
+      hour2.Morph(i);
+      hour.Morph(i);
     c = getch();
     switch (c) {
     case KEY_RESIZE:
       // hour.resize();
-       pong.resize();
+    //   pong.resize();
       break;
     case 'Q':
     case 'q':
